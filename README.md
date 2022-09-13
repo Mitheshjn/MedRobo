@@ -22,7 +22,7 @@ So, basically this rover has its own server where the doctor enters the patient 
 
 **Material Explaination :**
 
-**Raspberry Pi : ** This is the main brain of the rover and it basically controls the every action of the rover. It recives input from camera and processes it and sends commands to the motor drivers via the arduino uno.
+**Raspberry Pi :** This is the main brain of the rover and it basically controls the every action of the rover. It recives input from camera and processes it and sends commands to the motor drivers via the arduino uno.
 
-**Arduino Uno : ** The uno is used to control the all the motors in the robot. The reason behind using arduino is that the raspberry pi gets overloaded by processing the camera input and does the path planning and the server is hosted in the pi itself so, to reduce the load from the raspberry pi i am using arduino. The raspberry pi and arduino communicates via the USB cable using serial communication.
+**Arduino Uno :** The uno is used to control the all the motors in the robot. The reason behind using arduino is that the raspberry pi gets overloaded by processing the camera input and does the path planning and the server is hosted in the pi itself so, to reduce the load from the raspberry pi i am using arduino. The raspberry pi and arduino communicates via the USB cable using serial communication.
 
