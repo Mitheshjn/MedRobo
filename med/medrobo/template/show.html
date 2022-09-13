@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Med Robot</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<style>
+		*{padding: 10;
+  		  margin: 10;
+  		  text-decoration: none;
+		  list-style: none;
+  		  box-sizing: border-box;
+  		}
+		body{
+  			font-family: 'Poppins', sans-serif;
+  		}
+  		a{
+  			font-size: 20px;  
+  			color: black;	
+  			position: absolute;
+  			background: white;
+	  		margin-left: 10px;
+  			padding: 10px 15px;
+  			border-radius:30px;
+  			box-shadow: 0 5px 10px rgba(50,115,250,0.2);
+  		}
+  		a:hover{
+  			background-color:rgb(153,217,234); 
+  		}
+  		.button{
+  			max-width:100%; 
+  			top:15px;
+  			left: 20px;
+  			position: absolute;
+  			align-items: center;
+  			justify-content: center;		
+  		}
+  		.button2{
+  			width:200px; 
+  			top:15px;
+  			right: 1%;
+  			position: absolute;
+  			align-items: center;
+  			justify-content: center;		
+  		}
+  		table{
+  			margin-left: 30px;
+  			display: flex;
+  			text-align: center;
+  			align-items:center;
+  			justify-content: center;
+  			
+  		}
+  		
+	</style>
+	<h1 align="center">This is show data page</h1>
+	<div class="button">
+		<a href="{% url 'home'%}">Home</a>
+	</div>
+	<div class="button2">
+		<a href="{% url 'delete_data' %}">delete all data</a>
+	</div>
+	<table>
+		<tr>
+			<th>S.No&ensp;&ensp;</th>
+			<th>Name&ensp;&ensp;&ensp;&ensp;</th>
+			<th>Disease&ensp;&ensp;&ensp;&ensp;</th>
+			<th>Door no.&ensp;&ensp;</th>
+			<th>Bed no.&ensp;&ensp;</th>
+			<th>Med1&ensp;&ensp;</th>
+			<th>Med2&ensp;&ensp;</th>
+			<th>Med3&ensp;&ensp;</th>
+			<th>Med4&ensp;&ensp;</th>
+			<!--<th>Med5&ensp;&ensp;</th>
+			<th>Med6&ensp;&ensp;</th>-->
+		</tr>
+		{% for detail in detail_data %}
+		<tr>
+			<td>{{detail.id}}</td>
+			<td>{{detail.name}}</td>
+			<td>{{detail.disease}}</td>
+			<td>{{detail.door}}</td>
+			<td>{{detail.bed}}</td>
+			<td>{% if detail.med1 == NULL %}
+					&ensp;
+				{% else %}
+					yes
+				{%endif%}	</td>
+			<td>{% if detail.med2 == NULL %}
+					&ensp;
+				{% else %}
+					yes
+				{%endif%}	</td>
+			<td>{% if detail.med3 == NULL %}
+					&ensp;
+				{% else %}
+					yes
+				{%endif%}	</td>
+			<td>{% if detail.med4 == NULL %}
+					&ensp;
+				{% else %}
+					yes
+				{%endif%}	</td>
+			<!--<td>{% if detail.med5 == NULL %}
+					&ensp;
+				{% else %}
+					yes
+				{%endif%}	</td>
+			<td>{% if detail.med6 == NULL %}
+					&ensp;
+				{% else %}
+					yes
+				{%endif%}	</td>-->
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

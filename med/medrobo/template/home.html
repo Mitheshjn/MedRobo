@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Med Robot</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<style>
+		*{padding: 10;
+  		  margin: 10;
+  		  text-decoration: none;
+		  list-style: none;
+  		  box-sizing: border-box;
+  		}
+		body{
+  			
+  			font-family: 'Poppins', sans-serif;
+  		}
+  		a{
+  			font-size: 20px;  
+  			color: black;	
+  			position: relative;
+  			background: white;
+	  		margin-left: 10px;
+  			padding: 10px 15px;
+  			border-radius:30px;
+  			box-shadow: 0 5px 10px rgba(50,115,250,0.2);
+  		}
+  		a:hover{
+  			background-color:rgb(153,217,234); 
+  		}
+  		.button{
+  			max-width:100%; 
+  			display: flex;
+  			align-items: center;
+  			justify-content: center;		
+  		}
+  		.count{
+  			display: flex;
+  			justify-content: center;
+  			align-items: center;
+  		}
+  		.inst{
+  			margin-left: 20px;
+  		}
+	</style>
+	<h1 align="center">MEDICAL ROBOT</h1>
+	<p></p>
+	<div class="button">
+		<a href="{% url 'add'%}">Add data</a>
+		<a href="{% url 'show'%}">Show data</a>
+		<a href="">Start</a>
+	</div>
+	<div class="count">
+		<p>Count : &nbsp;</p>
+		{{count}}
+	</div>
+	<div class="inst">
+		<h3>Instructions :</h3>
+		<p>Minimum patient details required to start the robot is '2' and max is '10'</p>
+		<p>If count is '1', it is asking details of atleast one patient </p>
+		<p>If count is '10', it is asking details of the last patient </p>
+		<p>Once details of patient 10 is given please go to home and start the robot .</p>
+		<!-- <p>If count is '7', it is asking to give a random data which will be used to clear all previous data from '1' to '6' .</p>-->
+	</div>
+</body>
+</html>

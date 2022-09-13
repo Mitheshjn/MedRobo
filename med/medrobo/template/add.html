@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Med Robot</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<style>
+		*{padding: 10;
+  		  margin: 10;
+  		  text-decoration: none;
+		  list-style: none;
+  		  box-sizing: border-box;
+  		}
+		body{
+  			font-family: 'Poppins', sans-serif;
+  		}
+  		a{
+  			font-size: 20px;  
+  			color: black;	
+  			position: absolute;
+  			background: white;
+	  		margin-left: 10px;
+  			padding: 10px 15px;
+  			border-radius:30px;
+  			box-shadow: 0 5px 10px rgba(50,115,250,0.2);
+  		}
+  		a:hover{
+  			background-color:rgb(153,217,234); 
+  		}
+  		.button{
+  			max-width:100%; 
+  			top:15px;
+  			left: 20px;
+  			position: absolute;
+  			align-items: center;
+  			justify-content: center;		
+  		}
+  		.table{
+  			display: flex;
+  			justify-content: left;
+  			align-items:center;
+  		}
+  		.name{
+  			font-size: 20px;  
+  			color: black;	
+  			background: white;
+	  		margin-left: 50px;
+	  		margin-right: 50px;
+  			padding: 10px 15px;
+  		}
+  		.disease{
+  			font-size: 20px;  
+  			color: black;	
+  			background: white;
+	  		margin-left: 50px;
+	  		margin-right: 50px;
+  			padding: 10px 15px;
+  		}
+  		.door{
+  			font-size: 20px;  
+  			color: black;	
+  			background: white;
+	  		margin-left: 50px;
+	  		margin-right: 50px;
+  			padding: 10px 15px;
+  		}
+  		.bed{
+  			font-size: 20px;  
+  			color: black;	
+  			background: white;
+	  		margin-left: 50px;
+  			margin-right: 50px;
+  			padding: 10px 15px;
+  		}
+  		.med{
+  			font-size: 20px;  
+  			color: black;	
+  			background: white;
+	  		margin-left: 50px;
+	  		margin-right: 50px;
+  			padding: 10px 15px;
+  		}
+  		.medicine{
+  			position: absolute;
+  			right:5%;
+  		}
+  		input{
+  			margin:15px;
+  		}
+  		.input{
+  			position: absolute;
+  		}
+  		.ip1{
+  			margin-bottom: 50px;
+  			position: relative;
+  		}
+  		.ip2{
+  			margin-bottom: 100px;
+  			position: relative;
+  		}
+  		.ip3{
+  			margin-bottom: 150px;
+  			position: relative;
+  		}
+  		.ip4{
+  			margin-bottom: 200px;
+  			position: relative;
+  		}
+  		.ip5{
+  			margin-bottom: 250px;
+  			position: relative;
+  		}
+  		.ip6{
+  			margin-bottom: 300px;
+  			position: relative;
+  		}  		
+  		.ipname{
+  			height: 25px;
+  		}
+  		.ipdiesease{
+  			height: 25px;
+  		}
+  		.ipdoor{
+  			height: 25px;
+  		}
+  		.ipbed{
+  			height: 25px;
+  		}
+  		.submitbtn{
+  			font-size: 20px;  
+  			color: black;	
+  			cursor: pointer;
+  			border-width: 0px;
+  			bottom: 5%;
+  			left: 44%;
+  			display:flex;
+  			justify-content: center;
+  			align-items:center;
+  			position: absolute;
+  			background: white;
+	  		margin-left: 10px;
+  			padding: 10px 15px;
+  			border-radius:30px;
+  			box-shadow: 0 5px 10px rgba(50,115,250,0.2);		
+  		}
+  		.submitbtn:hover{
+  			background-color:rgb(153,217,234); 
+  		}
+  		.count{
+  			display: flex;
+  			justify-content: center;
+  			align-items: center;
+  		}
+  		.inst{
+  			margin-left: 20px;
+  		}
+	</style>
+	<h1 align="center">This is add data page</h1>
+	<div class="button">
+		<a href="{% url 'home'%}">Home</a>
+	</div>
+	<div class="content">
+		<div class="table">
+			<p class="name">name</p>
+			<p class="disease">disease</p>
+			<p class="door">door no</p>
+			<p class="bed">bed no</p>
+			<p class="med">medicine</p>
+		</div>
+	</div>
+	<form action="" method="POST">
+		{% csrf_token %}
+		
+		<input type="text" name="name1" class="ipname" placeholder="name">
+		<input type="text" name="disease1" class="ipdiesease" placeholder="disease">
+		<input type="text" name="door1" class="ipdoor" placeholder="door">
+		<input type="text" name="bed1" class="ipbed" placeholder="bed">
+
+		<input type="checkbox" name="m1-1" class="m1-1" placeholder="m1" >m1
+		<input type="checkbox" name="m2-1" class="m2-1" placeholder="m2" >m2
+		<input type="checkbox" name="m3-1" class="m3-1" placeholder="m3" >m3
+		<input type="checkbox" name="m4-1" class="m4-1" placeholder="m4" >m4
+		<!--<input type="checkbox" name="m5-1" class="m5-1" placeholder="m5" >m5
+		<input type="checkbox" name="m6-1" class="m6-1" placeholder="m6" >m6
+-->
+		<input type="submit" class="submitbtn" value="Submit">
+	</form>
+	<div class="count">
+		<p>Count : &nbsp;</p>
+		{{count}}
+	</div>
+	<div class="inst">
+		<h3>Instructions :</h3>
+		<p>Minimum patient details required to start the robot is '2' and max is '10'</p>
+		<p>If count is '1', it is asking details of atleast one patient </p>
+		<p>If count is '10', it is asking details of the last patient </p>
+		<p>Once details of patient 10 is given please go to home and start the robot .</p>
+		<!-- <p>If count is '7', it is asking to give a random data which will be used to clear all previous data from '1' to '6' .</p>-->
+	</div>
+</body>
+</html>
