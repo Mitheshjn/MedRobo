@@ -26,3 +26,8 @@ So, basically this rover has its own server where the doctor enters the patient 
 
 **Arduino Uno :** The uno is used to control the all the motors in the robot. The reason behind using arduino is that the raspberry pi gets overloaded by processing the camera input and does the path planning and the server is hosted in the pi itself so, to reduce the load from the raspberry pi i am using arduino. The raspberry pi and arduino communicates via the USB cable using serial communication.
 
+**Motors and motor driver :** The rover base has 4 motors to go front, back and turn/rotate left, right. One motor driver is to control the base 4 motors of the rover and 4 motors to control the medicine dispensing system.
+
+**Medicine Distribution System**
+
+To better understand the mechanism of distributing medicines which have i used, take the reference of a vending machine where a big coil is rotated by a motor and in the coil slots chips/chocolate is placed. For every 360 deg turn one item form the corresponding slot falls off. We used the exact same mechanism and replaced the chips with sealed medicine strip divided into individual parts.
