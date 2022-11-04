@@ -76,4 +76,5 @@ And thats it, the robot does its job and returns to home postion.
 If you want to modify the path use the file [robot_v2.1.py](https://github.com/Mitheshjn/MedRobo/blob/main/robot_v2.1.py).
 
 The path layout I choose for this project is :
+
 ![image](https://github.com/Mitheshjn/MedRobo/blob/main/layout.png)
