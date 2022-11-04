@@ -1,9 +1,5 @@
 import cv2
-import numpy as np
 import pyzbar.pyzbar as qr
-from PIL import Image
-import gpiozero
-from gpiozero import Servo
 import time
 from time import sleep
 import serial
@@ -1763,7 +1759,5 @@ if __name__ == '__main__':
 	ser.reset_input_buffer()
 	print_patient_details()
 	get_bed_no()
-	# threading.Thread(target=path_planning).start()
-	#threading.Thread(target=distance).start()
 	path_planning()
 	cursor.close()
