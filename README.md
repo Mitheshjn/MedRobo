@@ -54,25 +54,20 @@ So, during the time we built this system we had a few constrains, i.e we had lim
 * The [manage.py](https://github.com/Mitheshjn/MedRobo/blob/main/med/medrobo/manage.py) is use to start the GUI web server.
 
 To use this project, copy this project using the command :
-
-...
+```
 git clone https://github.com/Mitheshjn/MedRobo.git
-...
-
+```
 Once done open the directory and navigate to manage.py in the /med/medrobo folder and enter the command :
-
-...
+```
 python3 manage.py runserver
-...
-
+```
 Once the server is up and running, open your browser and navigate to 127.0.0.1:8000/med
 >NOTE : If you are accessing the webpage on the device which is hosting the web server then enter the above mentioned IP address. If not the replace it with the device IP address (it should look something like 192.168.xx.xx:8000/med). **To access the webpage your browser and host device should be on the same local network.**
 
 You can enter the paitent details and see them or delete them in the webpage. Once after filling the details run the command to start the robot.
-
-...
+```
 python3 robot_v2.1.py
-...
+```
 
 >NOTE : Make sure you are in the right directory before executing the commands
 
